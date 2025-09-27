@@ -12,17 +12,17 @@
     }
 
     :root {
-      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      --glass-bg: rgba(255, 255, 255, 0.08);
-      --glass-border: rgba(255, 255, 255, 0.2);
-      --text-primary: rgba(255, 255, 255, 0.95);
-      --text-secondary: rgba(255, 255, 255, 0.7);
+      --primary-gradient: linear-gradient(135deg, #2196F3 0%, #42A5F5 100%);
+      --secondary-gradient: linear-gradient(135deg, #1976D2 0%, #1E88E5 100%);
+      --glass-bg: rgba(255, 255, 255, 0.85);
+      --glass-border: rgba(33, 150, 243, 0.3);
+      --text-primary: #1a237e;
+      --text-secondary: #3949ab;
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e, #0f3460);
+      background: linear-gradient(45deg, #ffffff, #e3f2fd, #bbdefb, #90caf9);
       background-size: 400% 400%;
       animation: gradientShift 15s ease infinite;
       min-height: 100vh;
@@ -54,9 +54,9 @@
       width: 100%;
       height: 100%;
       background: 
-        radial-gradient(circle at 25% 25%, rgba(120, 119, 198, 0.4) 0%, transparent 25%),
-        radial-gradient(circle at 75% 75%, rgba(255, 119, 198, 0.4) 0%, transparent 25%),
-        radial-gradient(circle at 50% 50%, rgba(119, 221, 198, 0.3) 0%, transparent 25%);
+        radial-gradient(circle at 25% 25%, rgba(33, 150, 243, 0.15) 0%, transparent 25%),
+        radial-gradient(circle at 75% 75%, rgba(25, 118, 210, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 50% 50%, rgba(30, 136, 229, 0.1) 0%, transparent 25%);
       animation: neuralPulse 8s ease-in-out infinite;
     }
 
@@ -82,13 +82,13 @@
     .title {
       font-size: clamp(2.5rem, 8vw, 5rem);
       font-weight: 800;
-      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c);
+      background: linear-gradient(135deg, #1976D2, #2196F3, #42A5F5, #1E88E5);
       background-size: 300% 300%;
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: titleFlow 6s ease-in-out infinite;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+      text-shadow: 0 2px 20px rgba(33, 150, 243, 0.3);
       letter-spacing: -0.02em;
       line-height: 1.1;
     }
@@ -124,6 +124,9 @@
       transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
       overflow: hidden;
       cursor: pointer;
+      box-shadow: 
+        0 8px 32px rgba(33, 150, 243, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.8);
     }
 
     .audio-card::before {
@@ -144,11 +147,11 @@
 
     .audio-card:hover {
       transform: translateY(-8px) scale(1.02);
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.95);
       box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        0 25px 50px rgba(33, 150, 243, 0.2),
+        0 0 0 1px rgba(33, 150, 243, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
     }
 
     .audio-number {
@@ -163,7 +166,7 @@
       font-weight: 700;
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
-      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+      box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
     }
 
     .audio-title {
@@ -203,7 +206,7 @@
 
     .play-button:hover {
       transform: scale(1.1);
-      box-shadow: 0 8px 20px rgba(240, 147, 251, 0.4);
+      box-shadow: 0 8px 20px rgba(25, 118, 210, 0.5);
     }
 
     .time-display {
@@ -216,7 +219,7 @@
     .progress-container {
       flex: 1;
       height: 6px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(33, 150, 243, 0.2);
       border-radius: 3px;
       position: relative;
       cursor: pointer;
@@ -240,9 +243,9 @@
       transform: translateY(-50%);
       width: 12px;
       height: 12px;
-      background: white;
+      background: #1976D2;
       border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 8px rgba(25, 118, 210, 0.4);
     }
 
     .volume-container {
@@ -254,7 +257,7 @@
     .volume-slider {
       width: 80px;
       height: 4px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(33, 150, 243, 0.2);
       border-radius: 2px;
       outline: none;
       cursor: pointer;
@@ -278,7 +281,7 @@
     .orb-1 {
       width: 80px;
       height: 80px;
-      background: radial-gradient(circle, rgba(102, 126, 234, 0.3), transparent);
+      background: radial-gradient(circle, rgba(33, 150, 243, 0.2), transparent);
       top: 20%;
       left: 10%;
       animation-duration: 25s;
@@ -287,7 +290,7 @@
     .orb-2 {
       width: 120px;
       height: 120px;
-      background: radial-gradient(circle, rgba(240, 147, 251, 0.2), transparent);
+      background: radial-gradient(circle, rgba(25, 118, 210, 0.15), transparent);
       top: 60%;
       right: 15%;
       animation-duration: 30s;
@@ -297,7 +300,7 @@
     .orb-3 {
       width: 60px;
       height: 60px;
-      background: radial-gradient(circle, rgba(245, 87, 108, 0.4), transparent);
+      background: radial-gradient(circle, rgba(66, 165, 245, 0.25), transparent);
       bottom: 20%;
       left: 20%;
       animation-duration: 35s;
@@ -354,7 +357,7 @@
     .play-button:focus,
     .progress-container:focus,
     .volume-slider:focus {
-      outline: 2px solid rgba(102, 126, 234, 0.6);
+      outline: 2px solid rgba(33, 150, 243, 0.6);
       outline-offset: 2px;
     }
 
@@ -381,7 +384,7 @@
     <main class="audio-grid">
       <article class="audio-card">
         <div class="audio-number">1</div>
-        <h2 class="audio-title">ミュージック01</h2>
+        <h2 class="audio-title">音源①</h2>
         <div class="custom-audio-player">
           <audio class="fallback-audio" src="./Folder_music/spring24_01.mp3" controls></audio>
         </div>
@@ -389,7 +392,7 @@
 
       <article class="audio-card">
         <div class="audio-number">2</div>
-        <h2 class="audio-title">ミュージック02</h2>
+        <h2 class="audio-title">音源②</h2>
         <div class="custom-audio-player">
           <audio class="fallback-audio" src="./Folder_music/spring24_02.mp3" controls></audio>
         </div>
@@ -397,7 +400,7 @@
 
       <article class="audio-card">
         <div class="audio-number">3</div>
-        <h2 class="audio-title">ミュージック03</h2>
+        <h2 class="audio-title">音源③</h2>
         <div class="custom-audio-player">
           <audio class="fallback-audio" src="./Folder_music/spring24_03.mp3" controls></audio>
         </div>
@@ -405,7 +408,7 @@
 
       <article class="audio-card">
         <div class="audio-number">4</div>
-        <h2 class="audio-title">ミュージック04</h2>
+        <h2 class="audio-title">音源④</h2>
         <div class="custom-audio-player">
           <audio class="fallback-audio" src="./Folder_music/spring24_04.mp3" controls></audio>
         </div>
@@ -458,10 +461,10 @@
         audio.addEventListener('play', function() {
           const card = this.closest('.audio-card');
           card.style.boxShadow = `
-            0 25px 50px rgba(0, 0, 0, 0.2),
-            0 0 30px rgba(102, 126, 234, 0.3),
-            0 0 0 1px rgba(255, 255, 255, 0.1),
-            inset 0 1px 0 rgba(255, 255, 255, 0.2)
+            0 25px 50px rgba(33, 150, 243, 0.3),
+            0 0 30px rgba(33, 150, 243, 0.4),
+            0 0 0 1px rgba(33, 150, 243, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 1)
           `;
         });
         
@@ -494,9 +497,9 @@
       const particle = document.createElement('div');
       particle.style.cssText = `
         position: fixed;
-        width: 2px;
-        height: 2px;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent);
+        width: 3px;
+        height: 3px;
+        background: radial-gradient(circle, rgba(33, 150, 243, 0.8), transparent);
         border-radius: 50%;
         pointer-events: none;
         z-index: -1;
